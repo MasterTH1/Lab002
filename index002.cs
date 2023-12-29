@@ -4,13 +4,22 @@ class CoffeeMachine
 {
     static void Main()
     {
-        Console.WriteLine("กด 1 สำหรับกาแฟดำ");
-        Console.WriteLine("กด 2 สำหรับมอคค่า");
-        Console.WriteLine("กด 3 สำหรับลาเต้");
-        Console.WriteLine("กด 4 สำหรับช็อกโกแลต");
+        Console.WriteLine("กาแฟเครื่อง");
+        Console.WriteLine("--------------");
+        Console.WriteLine("1. กาแฟดำ");
+        Console.WriteLine("2. มอคค่า");
+        Console.WriteLine("3. ลาเต้");
+        Console.WriteLine("4. ช็อกโกแลต");
+        Console.WriteLine("--------------");
 
+        Console.Write("กรุณาเลือกเมนู (1-4): ");
         int choice = int.Parse(Console.ReadLine());
 
+        ProcessMenuChoice(choice);
+    }
+
+    static void ProcessMenuChoice(int choice)
+    {
         switch (choice)
         {
             case 1:
